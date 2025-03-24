@@ -62,5 +62,7 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """Prints a message when an instance is deleted"""
-        print("Bye rectangle...")
+        """Deletes and instance of a class"
+        """
+        print("Bye Rectangle...")
+        type(self).number_of_instances -= 1
