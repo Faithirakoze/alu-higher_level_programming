@@ -49,9 +49,11 @@ class Rectangle:
         return result
 
     def __str__(self):
-        if self.__width == 0 or self.__height == 0:
+        """
+        Returns a string representation of the rectangle using '#' characters.
+
+        If width or height is 0, it returns an empty string.
+        """
+        if self.width == 0 or self.height == 0:
             return ""
-        result = ""
-        for i in range(self.__height):
-            result += "#" * self.__width + "\n"
-            return result.rstrip()
+        return "\n".join("#" * self.width for _ in range(self.height))
